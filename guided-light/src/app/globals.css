@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 169 30% 24%;
+    --card: 0 0% 100%;
+    --card-foreground: 169 30% 24%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 169 30% 24%;
+    --primary: 151 40% 54%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 60 9% 98%;
+    --secondary-foreground: 169 30% 24%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 169 10% 54%;
+    --accent: 167 41% 89%;
+    --accent-foreground: 169 30% 24%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 169 10% 88%;
+    --input: 169 10% 88%;
+    --ring: 151 40% 54%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 169 35% 10%;
+    --foreground: 0 0% 95%;
+    --card: 169 35% 15%;
+    --card-foreground: 0 0% 95%;
+    --popover: 169 35% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 151 40% 54%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 169 35% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 169 35% 20%;
+    --muted-foreground: 169 10% 70%;
+    --accent: 169 35% 25%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 169 35% 25%;
+    --input: 169 35% 25%;
+    --ring: 151 40% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-nunito;
+  }
+}
+
+@layer utilities {
+  .font-nunito {
+    font-family: var(--font-nunito), sans-serif;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .tasbeeh-btn {
+    @apply px-4 py-2 rounded-md bg-secondary hover:bg-accent transition-colors;
+  }
+
+  .primary-button {
+    @apply px-4 py-2 rounded-md bg-primary text-primary-foreground hover:opacity-90 transition-colors;
+  }
+
+  .auth-button {
+    @apply px-3 py-1 rounded-md bg-transparent border border-primary text-foreground hover:bg-primary/10 transition-colors;
+  }
+}
