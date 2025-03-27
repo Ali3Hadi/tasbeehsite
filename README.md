@@ -1,2 +1,0 @@
-# tasbeehsite
-by ali hadi
